@@ -246,22 +246,23 @@
 .owl-dot {
     width: 12px;
     height: 12px;
-    background: rgba(0, 0, 0, 0.2);
+    background: #e0e7ff; /* Primary light */
     border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid #c7d2fe;
     padding: 0;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .owl-dot:hover {
-    background: rgba(0, 0, 0, 0.4);
+    background: #c7d2fe;
     transform: scale(1.2);
 }
 
 .owl-dot.active { 
-    background: #4f46e5; /* Primary color */
+    background: #6366f1; /* Primary color */
     border-color: #4f46e5;
     transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
 }
 
