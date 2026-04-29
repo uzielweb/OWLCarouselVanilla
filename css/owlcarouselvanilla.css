@@ -176,3 +176,41 @@
     transform-style: preserve-3d;
 }
 
+/* Basic Theme - Bare minimum to be usable */
+.owl-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.owl-nav button {
+    background: #eee;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.owl-nav button:hover {
+    background: #ddd;
+}
+
+.owl-dots {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.owl-dot {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+}
+
+.owl-dot.active {
+    background: #333;
+}
+

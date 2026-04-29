@@ -56,114 +56,6 @@ body {
     font-weight: 400;
 }
 
-/* Owl Theme - Specific Look & Feel */
-.owl-stage-outer {
-    padding: 30px 0; /* Space for shadows */
-}
-
-.owl-item {
-    transition: var(--transition);
-}
-
-.owl-nav {
-    position: absolute;
-    top: 50%;
-    width: calc(100% + 60px);
-    left: -30px;
-    display: flex;
-    justify-content: space-between;
-    pointer-events: none;
-    transform: translateY(-50%);
-    z-index: 10;
-}
-
-.owl-carousel .owl-nav button {
-    width: 64px;
-    height: 64px;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-    pointer-events: all;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 56px !important; /* Increased from 42px and added !important to override resets */
-    font-weight: 200; /* Even thinner for a sleek look */
-    line-height: 1;
-    color: var(--primary-color);
-    transition: var(--transition);
-    cursor: pointer;
-    padding-bottom: 8px !important; /* Centering adjustment */
-}
-
-
-.owl-nav button:hover {
-    background: var(--primary-color);
-    color: var(--white);
-    transform: scale(1.15) translateY(-2px);
-    box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.4);
-    border-color: var(--primary-dark);
-}
-
-.owl-nav button:active {
-    transform: scale(0.95);
-}
-
-.owl-carousel .owl-dots {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    margin-top: 50px;
-    position: relative;
-    z-index: 15;
-    width: 100%;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
-.owl-carousel .owl-dot {
-    width: 14px;
-    height: 14px;
-    background-color: #cbd5e1 !important;
-    border: 2px solid transparent;
-    border-radius: 50%;
-    transition: var(--transition);
-    position: relative;
-    display: block;
-    padding: 0;
-    margin: 0;
-    outline: none;
-}
-
-.owl-carousel .owl-dot:hover {
-    background-color: #94a3b8 !important;
-    transform: scale(1.2);
-}
-
-.owl-carousel .owl-dot.active {
-    width: 40px;
-    height: 14px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)) !important;
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
-}
-
-
-.owl-carousel .owl-dot.active::after {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    border: 1px solid var(--primary-light);
-    border-radius: 14px;
-    opacity: 0.5;
-}
 
 
 
@@ -312,8 +204,5 @@ body {
 @media (max-width: 768px) {
     .section-title {
         font-size: 2.5rem;
-    }
-    .owl-nav {
-        display: none;
     }
 }
