@@ -217,8 +217,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 44px;
-    min-height: 44px;
+    min-width: 48px;
+    min-height: 48px;
+    width: 48px;
+    height: 48px;
 }
 
 .owl-nav button:hover {
