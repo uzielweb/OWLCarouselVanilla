@@ -243,7 +243,12 @@ class OwlCarouselVanilla {
 
     updateNavigation() {
         if (this.currentSettings.nav) {
-            if (!this.navElement) this.createNavigation();
+            if (!this.navElement) {
+                this.createNavigation();
+            } else if (!this.currentSettings.navContainer) {
+                // Update classes if already exists and is managed by core
+                this.navElement.className = `owl-nav owl-nav-${this.currentSettings.navPosition}`;
+            }
         } else if (this.navElement) {
             this.navElement.remove();
             this.navElement = null;
@@ -252,7 +257,12 @@ class OwlCarouselVanilla {
 
     updateDotsVisibility() {
         if (this.currentSettings.dots) {
-            this.createDots();
+            if (!this.dotsElement) {
+                this.createDots();
+            } else if (!this.currentSettings.dotsContainer) {
+                // Update classes if already exists and is managed by core
+                this.dotsElement.className = `owl-dots owl-dots-${this.currentSettings.dotsPosition}`;
+            }
         } else if (this.dotsElement) {
             this.dotsElement.remove();
             this.dotsElement = null;
