@@ -44,6 +44,7 @@
                 <a href="#autoheight" class="demo-link" data-demo="autoheight">AutoHeight</a>
                 <a href="#animate" class="demo-link" data-demo="animate">Fade Animation</a>
                 <a href="#rtl" class="demo-link" data-demo="rtl">RTL Support</a>
+                <a href="#padding" class="demo-link" data-demo="padding">Stage Padding</a>
                 <a href="#callbacks" class="demo-link" data-demo="callbacks">Callbacks & Events</a>
             </div>
 
@@ -97,6 +98,17 @@
                     <div class="item"><div class="magazine-card"><div class="card-content"><h3>Item 2</h3></div></div></div>
                     <div class="item"><div class="magazine-card"><div class="card-content"><h3>Item 3 (Left)</h3></div></div></div>
                 </div>
+            </div>
+
+            <!-- Demo: StagePadding -->
+            <div id="demo-padding" class="demo-section">
+                <h2 style="margin-bottom: 20px;">Stage Padding (Peek Neighbors)</h2>
+                <div class="owl-carousel" id="slider-padding">
+                    <div class="item"><div class="magazine-card"><div class="card-img-container"><img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=687&auto=format&fit=crop"></div><div class="card-content"><h3>Slide 1</h3></div></div></div>
+                    <div class="item"><div class="magazine-card"><div class="card-img-container"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=687&auto=format&fit=crop"></div><div class="card-content"><h3>Slide 2</h3></div></div></div>
+                    <div class="item"><div class="magazine-card"><div class="card-img-container"><img src="https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=687&auto=format&fit=crop"></div><div class="card-content"><h3>Slide 3</h3></div></div></div>
+                </div>
+                <p style="margin-top: 20px; opacity: 0.7;">Using <code>stagePadding: 50</code> to make adjacent slides visible on the edges.</p>
             </div>
 
             <!-- Demo: Callbacks -->
@@ -197,7 +209,17 @@
                 dots: true
             });
 
-            // 6. Callbacks
+            // 6. StagePadding
+            new OwlCarouselVanilla('#slider-padding', {
+                items: 1,
+                stagePadding: 50,
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: true
+            });
+
+            // 7. Callbacks
             const logger = document.getElementById('log');
             const addLog = (msg) => {
                 const entry = document.createElement('div');
