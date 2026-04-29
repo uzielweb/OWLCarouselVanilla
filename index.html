@@ -304,9 +304,6 @@
                     posSlider.currentSettings[type === 'nav' ? 'navPosition' : 'dotsPosition'] = pos;
                     if (type === 'nav') posSlider.updateNavigation();
                     else posSlider.updateDotsVisibility();
-                    
-                    // Force recalculation since CSS layout changed
-                    setTimeout(() => posSlider.handleResize(), 50);
                 });
             });
 

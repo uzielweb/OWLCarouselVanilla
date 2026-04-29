@@ -253,6 +253,7 @@ class OwlCarouselVanilla {
             this.navElement.remove();
             this.navElement = null;
         }
+        this.handleResize();
     }
 
     updateDotsVisibility() {
@@ -267,6 +268,7 @@ class OwlCarouselVanilla {
             this.dotsElement.remove();
             this.dotsElement = null;
         }
+        this.handleResize();
     }
 
     handleResize() {
