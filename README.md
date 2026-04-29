@@ -1,113 +1,118 @@
 # OWLCarouselVanilla 🦉
 
-**OWLCarouselVanilla** is a modern, lightweight, high-fidelity Vanilla JavaScript carousel implementation inspired by Owl Carousel, but without jQuery dependencies. Designed to provide a premium experience with refined design and optimized performance.
+**OWLCarouselVanilla** is a modern, high-fidelity, zero-dependency Vanilla JavaScript carousel. It achieves full feature parity with the famous Owl Carousel 2 while eliminating jQuery dependencies, providing a premium, lightweight, and extremely customizable experience for modern web development.
 
 ![OWLCarouselVanilla Demo](https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=1200&auto=format&fit=crop)
 
-## ✨ Features
+## ✨ Premium Features
 
-- **Zero Dependencies**: Written in pure Vanilla JS.
-- **Premium Design**: Modern design system with glassmorphism, soft shadows, and fluid animations.
-- **Responsive**: Adapts to any screen size (Mobile, Tablet, Desktop).
-- **Infinite Loop**: Smooth and continuous transition between slides.
-- **Interactivity**: Drag (mouse) and touch (mobile) support.
-- **Autoplay**: Automatic playback option with pause on hover.
-- **Lazy Load**: Optimized image loading.
-- **Customizable**: Easy to adjust colors, sizes, and behaviors via CSS and JS.
+- **🚀 Zero Dependencies**: 100% Native ES6+ JavaScript.
+- **🏗️ Full Parity**: Supports `stagePadding`, `merge`, `autoWidth`, `autoHeight`, `RTL`, and more.
+- **🎨 UI Positions**: Advanced positioning system for Nav and Dots (Top, Middle, Bottom, Vertical stacks).
+- **🕹️ Responsive Grid**: Breakpoint-based settings with deep object merging.
+- **⚡ Performance**: Hardware-accelerated transitions (`translate3d`) and optimized DOM recycling.
+- **📱 Touch & Drag**: Native support for mouse drag and touch gestures with elastic `pullDrag`.
+- **🎭 Animations**: Built-in support for custom entrance and exit animations (Animate.css compatible).
 
-## 🚀 How to Use
+## 🚀 Installation
 
-### 1. Include files in your project
-
-Copy the `css/` and `js/` folders to your project and reference the files in your HTML:
+Include the core files in your project:
 
 ```html
-<!-- Structural and Design Styles -->
+<!-- Core Structural Styles -->
 <link rel="stylesheet" href="css/owlcarouselvanilla.css">
+
+<!-- Optional Demo/Theme Styles -->
 <link rel="stylesheet" href="css/style.css">
 
-<!-- Scripts -->
+<!-- Core Script -->
 <script src="js/owlcarouselvanilla.js"></script>
 ```
 
-### 2. HTML Structure
-
-Create a container with the `.owl-carousel` class and place your items inside:
+## 🛠️ Basic Usage
 
 ```html
-<div class="owl-carousel" id="my-slider">
-    <div class="item">
-        <!-- Your content here (e.g., card, image, etc.) -->
-        <div class="magazine-card">...</div>
-    </div>
-    <div class="item">...</div>
+<div class="owl-carousel" id="main-slider">
+    <div class="item"><h4>Slide 1</h4></div>
+    <div class="item"><h4>Slide 2</h4></div>
+    <div class="item"><h4>Slide 3</h4></div>
 </div>
-```
 
-### 3. Initialization
-
-Initialize the carousel via JavaScript:
-
-```javascript
-document.addEventListener('DOMContentLoaded', () => {
-    const slider = new OwlCarouselVanilla('#my-slider', {
-        items: 3,           // Visible items on desktop
-        loop: true,          // Infinite loop
-        margin: 30,          // Spacing between items
-        nav: true,           // Show navigation arrows
-        dots: true,          // Show navigation dots
-        autoplay: true,      // Start automatically
-        responsive: {        // Adjustments per screen width
+<script>
+    new OwlCarouselVanilla('#main-slider', {
+        items: 3,
+        loop: true,
+        margin: 20,
+        nav: true,
+        dots: true,
+        responsive: {
             0: { items: 1 },
-            640: { items: 2 },
+            768: { items: 2 },
             1024: { items: 3 }
         }
     });
-});
+</script>
 ```
 
-## ⚙️ Available Options
+## ⚙️ Configuration Options
 
 | Option | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
-| `items` | Number | `3` | Number of visible items. |
-| `loop` | Boolean | `true` | Enables infinite loop. |
-| `margin` | Number | `0` | Margin between items (px). |
-| `nav` | Boolean | `true` | Displays Prev/Next arrows. |
-| `dots` | Boolean | `true` | Displays indicator dots. |
-| `autoplay` | Boolean | `false` | Enables automatic playback. |
-| `autoplayTimeout` | Number | `5000` | Time between slides (ms). |
-| `smartSpeed` | Number | `300` | Transition speed (ms). |
-| `center` | Boolean | `false` | Centers the active item. |
+| `items` | Number | `3` | Number of items to display. |
+| `margin` | Number | `0` | Margin-right on items (px). |
+| `loop` | Boolean | `true` | Infinite loop. |
+| `rewind` | Boolean | `false` | Go back to start when at end (only if `loop` is false). |
+| `center` | Boolean | `false` | Center item. Works with odd and even items. |
+| `stagePadding` | Number | `0` | Padding left/right on stage (peek neighbors). |
+| `merge` | Boolean | `false` | Merge items based on `data-merge` attribute. |
+| `autoWidth` | Boolean | `false` | Use item's natural width. |
+| `autoHeight` | Boolean | `false` | Adjust height based on active slide. |
+| `nav` | Boolean | `false` | Show Next/Prev buttons. |
+| `navPosition` | String | `'middle-left-right'` | `top-left`, `top-center`, `top-right`, `bottom-left`, `bottom-center`, `bottom-right`, `left-vertical`, `right-vertical`. |
+| `dots` | Boolean | `true` | Show dots navigation. |
+| `dotsPosition` | String | `'bottom-center'` | Same options as `navPosition`. |
+| `autoplay` | Boolean | `false` | Autoplay support. |
+| `rtl` | Boolean | `false` | Right-to-left support. |
+| `pullDrag` | Boolean | `true` | Elastic effect when dragging past limits. |
 
-## 🛠️ API Methods
+## 🌟 Advanced Features
 
-You can control the carousel programmatically:
-
-```javascript
-const carousel = new OwlCarouselVanilla('#my-slider');
-
-carousel.next();          // Go to next slide
-carousel.prev();          // Go to previous slide
-carousel.to(2);            // Go to slide at index 2
-carousel.destroy();        // Remove carousel and restore original HTML
+### Merge Grid
+Items can occupy multiple columns using the `data-merge` attribute:
+```html
+<div class="item" data-merge="2">Ocupo 2 colunas</div>
 ```
 
-## 🎨 Customization
+### Stage Padding
+Reveal parts of the next and previous slides:
+```javascript
+new OwlCarouselVanilla('.owl-carousel', {
+    stagePadding: 50,
+    margin: 10
+});
+```
 
-The visual design is controlled by `css/style.css`. You can change the main colors by editing the variables in `:root`:
+### Custom Animations
+Use standard CSS classes for slide transitions:
+```javascript
+new OwlCarouselVanilla('.owl-carousel', {
+    animateOut: 'fadeOut',
+    animateIn: 'flipInX',
+    items: 1
+});
+```
 
-```css
-:root {
-    --primary-color: #6366f1; /* Main indigo color */
-    --primary-dark: #4f46e5;
-    --bg-light: #f8fafc;
-}
+## 📡 API & Callbacks
+```javascript
+const owl = new OwlCarouselVanilla('#slider', {
+    onInitialized: () => console.log('Ready!'),
+    onTranslated: (event) => console.log('Moved to:', event.index)
+});
+
+owl.next();
+owl.to(5);
+owl.refresh(); // Recalculate everything
 ```
 
 ## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
----
-Developed with ❤️ for the Web community.
+MIT License. Created by [Uziel](https://github.com/uzielweb).
