@@ -2,14 +2,6 @@
  * Owl Carousel v2.3.4 - Core Structural Styles
  * Optimized for performance and stability
  */
-.owl-carousel {
-    display: none;
-    width: 100%;
-    -webkit-tap-highlight-color: transparent;
-    /* position relative and z-index fix webkit rendering */
-    position: relative;
-    z-index: 1;
-}
 
 .owl-carousel .owl-stage {
     position: relative;
@@ -87,7 +79,8 @@
 }
 
 .owl-carousel.owl-loaded {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .owl-carousel.owl-loading {
@@ -180,6 +173,10 @@
 .owl-carousel {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    z-index: 1;
 }
 
 .owl-nav, .owl-dots {
