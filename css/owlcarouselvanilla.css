@@ -223,10 +223,10 @@
 .owl-nav-middle-left-right button { pointer-events: auto; }
 
 /* Adjust stage outer when vertical navs are used to avoid overlap */
-.owl-carousel:has(.owl-nav-left-vertical) { padding-left: 60px; }
-.owl-carousel:has(.owl-nav-right-vertical) { padding-right: 60px; }
-.owl-carousel:has(.owl-dots-left-vertical) { padding-left: 30px; }
-.owl-carousel:has(.owl-dots-right-vertical) { padding-right: 30px; }
+.owl-carousel:has(.owl-nav-left-vertical) { padding-left: 70px; }
+.owl-carousel:has(.owl-nav-right-vertical) { padding-right: 70px; }
+.owl-carousel:has(.owl-dots-left-vertical) { padding-left: 40px; }
+.owl-carousel:has(.owl-dots-right-vertical) { padding-right: 40px; }
 
 .owl-nav button {
     background: #fff;
