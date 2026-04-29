@@ -57,6 +57,8 @@ class OwlCarouselVanilla {
             touchDrag: true,
             pullDrag: true,
             freeDrag: false,
+            merge: false,
+            mergeFit: true,
             slideBy: 1,
             rewind: true,
             rtl: false,
@@ -278,15 +280,25 @@ class OwlCarouselVanilla {
         const margin = this.currentSettings.margin || 0;
         const items = this.visibleItems || 1;
         
-        const itemWidth = (containerWidth - (margin * (items - 1))) / items;
+        // Grid unit width
+        const unitWidth = (containerWidth - (margin * (items - 1))) / items;
         
         let totalWidth = 0;
         const children = Array.from(this.stage.children);
         
         children.forEach((child) => {
+            let itemWidth = unitWidth;
+
+            if (this.currentSettings.merge) {
+                const mergeValue = parseInt(child.getAttribute('data-merge')) || 1;
+                const fitValue = this.currentSettings.mergeFit ? Math.min(mergeValue, items) : mergeValue;
+                itemWidth = (unitWidth * fitValue) + (margin * (fitValue - 1));
+            }
+
             child.style.width = this.currentSettings.autoWidth ? 'auto' : `${itemWidth}px`;
             child.style.marginRight = this.currentSettings.rtl ? '0' : `${margin}px`;
             child.style.marginLeft = this.currentSettings.rtl ? `${margin}px` : '0';
+            
             totalWidth += (this.currentSettings.autoWidth ? child.offsetWidth : itemWidth) + margin;
         });
 
@@ -304,7 +316,6 @@ class OwlCarouselVanilla {
         this.trigger('onTranslate');
         const oldIndex = this.currentIndex;
         
-        // Handle Rewind
         if (!this.currentSettings.loop && this.currentSettings.rewind) {
             if (index >= this.items.length) index = 0;
             if (index < 0) index = this.items.length - 1;
@@ -319,19 +330,34 @@ class OwlCarouselVanilla {
         const padding = this.currentSettings.stagePadding || 0;
         const containerWidth = this.stageOuter.clientWidth - (padding * 2);
         const margin = this.currentSettings.margin || 0;
-        const itemWidth = (containerWidth - (margin * (this.visibleItems - 1))) / this.visibleItems;
+        const unitWidth = (containerWidth - (margin * (this.visibleItems - 1))) / this.visibleItems;
         
         let translate = 0;
-        if (this.currentSettings.autoWidth) {
+        if (this.currentSettings.autoWidth || this.currentSettings.merge) {
             for (let i = 0; i < offset + this.currentIndex; i++) {
-                translate += children[i].offsetWidth + margin;
+                let w = unitWidth;
+                if (this.currentSettings.merge) {
+                    const mergeValue = parseInt(children[i].getAttribute('data-merge')) || 1;
+                    const fitValue = this.currentSettings.mergeFit ? Math.min(mergeValue, this.visibleItems) : mergeValue;
+                    w = (unitWidth * fitValue) + (margin * (fitValue - 1));
+                } else if (this.currentSettings.autoWidth) {
+                    w = children[i].offsetWidth;
+                }
+                translate += w + margin;
             }
         } else {
-            translate = (offset + this.currentIndex) * (itemWidth + margin);
+            translate = (offset + this.currentIndex) * (unitWidth + margin);
         }
 
         if (this.currentSettings.center) {
-            const currentItemWidth = this.currentSettings.autoWidth ? targetItem.offsetWidth : itemWidth;
+            let currentItemWidth = unitWidth;
+            if (this.currentSettings.merge) {
+                const mergeValue = parseInt(targetItem.getAttribute('data-merge')) || 1;
+                const fitValue = this.currentSettings.mergeFit ? Math.min(mergeValue, this.visibleItems) : mergeValue;
+                currentItemWidth = (unitWidth * fitValue) + (margin * (fitValue - 1));
+            } else if (this.currentSettings.autoWidth) {
+                currentItemWidth = targetItem.offsetWidth;
+            }
             translate -= (containerWidth - currentItemWidth) / 2;
         }
 
