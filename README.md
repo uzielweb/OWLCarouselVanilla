@@ -2,6 +2,8 @@
 
 **OWLCarouselVanilla** is a modern, high-fidelity, zero-dependency Vanilla JavaScript carousel. It achieves full feature parity with the famous Owl Carousel 2 while eliminating jQuery dependencies, providing a premium, lightweight, and extremely customizable experience for modern web development.
 
+[🚀 Ver Demo ao Vivo](https://uzielweb.github.io/OWLCarouselVanilla/)
+
 ![OWLCarouselVanilla Demo](https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=1200&auto=format&fit=crop)
 
 ## ✨ Premium Features
