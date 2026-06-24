@@ -857,8 +857,8 @@
 
                     // Update Slider
                     if (type === 'offset') {
-                        posSlider.currentSettings.navOffset = parseInt(pos);
-                        posSlider.handleResize();
+                        posSlider.options.navOffset = parseInt(pos);
+                        posSlider.refresh();
                     } else {
                         posSlider.currentSettings[type === 'nav' ? 'navPosition' : 'dotsPosition'] = pos;
                         if (type === 'nav') posSlider.updateNavigation();
