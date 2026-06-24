@@ -215,8 +215,9 @@
 .owl-nav-middle-left-right {
     position: absolute;
     top: 50%;
-    left: 0;
-    width: 100%;
+    left: calc(var(--owl-nav-offset, 0px) * -1);
+    right: calc(var(--owl-nav-offset, 0px) * -1);
+    width: auto;
     justify-content: space-between;
     transform: translateY(-50%);
     pointer-events: none;
