@@ -1,30 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OWLCarouselVanilla - Premium Virtual Library</title>
-    <meta name="description" content="Explore our virtual library of magazines and publications with a seamless browsing experience.">
-    
+    <meta name="description"
+        content="Explore our virtual library of magazines and publications with a seamless browsing experience.">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Custom Styles -->
     <link rel="stylesheet" href="./css/owlcarouselvanilla.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
 
-    <header style="padding: 20px 0; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000;">
-        <div class="container" style="padding: 0 20px; display: flex; justify-content: space-between; align-items: center;">
-            <div style="font-size: 1.5rem; font-weight: 800; color: var(--primary-color);">OWL<span style="color: #333;">CarouselVanilla</span></div>
+    <header
+        style="padding: 20px 0; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000;">
+        <div class="container"
+            style="padding: 0 20px; display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--primary-color);">OWL<span
+                    style="color: #333;">CarouselVanilla</span></div>
             <nav>
-                <ul style="list-style: none; display: flex; gap: 30px; font-weight: 600;">
-                    <li><a href="#" style="text-decoration: none; color: #333;">Home</a></li>
-                    <li><a href="#" style="text-decoration: none; color: #333;">Magazines</a></li>
-                    <li><a href="#" style="text-decoration: none; color: #333;">About</a></li>
+                <ul style="list-style: none; display: flex; gap: 30px; font-weight: 600; align-items: center;">
+                    <li><a href="https://github.com/uzielweb/OWLCarouselVanilla" target="_blank"
+                            style="text-decoration: none; color: #333; display: flex; align-items: center; gap: 5px;">
+                            <svg height="20" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="20"
+                                data-view-component="true" class="octicon octicon-mark-github v-align-middle"
+                                style="fill: currentColor;">
+                                <path fill-rule="evenodd"
+                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                                </path>
+                            </svg>
+                            GitHub
+                        </a></li>
                 </ul>
             </nav>
         </div>
@@ -34,7 +50,8 @@
         <section class="container" style="text-align: center; padding-top: 60px;">
             <div class="section-header">
                 <h1 class="section-title">Features Showcase</h1>
-                <p class="section-subtitle">Explore the power of OWLCarouselVanilla with our interactive demos. Pure JS, high performance, and premium design.</p>
+                <p class="section-subtitle">Explore the power of OWLCarouselVanilla with our interactive demos. Pure JS,
+                    high performance, and premium design.</p>
             </div>
 
             <!-- Demo Navigation Menu -->
@@ -54,10 +71,81 @@
             <div id="demo-default" class="demo-section active">
                 <h2 style="margin-bottom: 20px;">Default Implementation</h2>
                 <div class="owl-carousel" id="slider-default">
-                    <div class="item"><div class="magazine-card"><div class="card-img-container"><img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=687&auto=format&fit=crop"></div><div class="card-content"><h3 class="card-title">Edition #01</h3><a href="#" class="btn-read">Read</a></div></div></div>
-                    <div class="item"><div class="magazine-card"><div class="card-img-container"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=687&auto=format&fit=crop"></div><div class="card-content"><h3 class="card-title">Edition #02</h3><a href="#" class="btn-read">Read</a></div></div></div>
-                    <div class="item"><div class="magazine-card"><div class="card-img-container"><img src="https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=687&auto=format&fit=crop"></div><div class="card-content"><h3 class="card-title">Edition #03</h3><a href="#" class="btn-read">Read</a></div></div></div>
-                    <div class="item"><div class="magazine-card"><div class="card-img-container"><img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?q=80&w=687&auto=format&fit=crop"></div><div class="card-content"><h3 class="card-title">Edition #04</h3><a href="#" class="btn-read">Read</a></div></div></div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-img-container"><img
+                                    src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=687&auto=format&fit=crop">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Edition #01</h3><a href="#" class="btn-read">Read</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-img-container"><img
+                                    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=687&auto=format&fit=crop">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Edition #02</h3><a href="#" class="btn-read">Read</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-img-container"><img
+                                    src="https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=687&auto=format&fit=crop">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Edition #03</h3><a href="#" class="btn-read">Read</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-img-container"><img
+                                    src="https://images.unsplash.com/photo-1493612276216-ee3925520721?q=80&w=687&auto=format&fit=crop">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Edition #04</h3><a href="#" class="btn-read">Read</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-img-container"><img
+                                    src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=687&auto=format&fit=crop">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Edition #05</h3><a href="#" class="btn-read">Read</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-img-container"><img
+                                    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=687&auto=format&fit=crop">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Edition #06</h3><a href="#" class="btn-read">Read</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    style="margin-top: 30px; background: #282c34; border-radius: 8px; padding: 20px; text-align: left; overflow-x: auto; position: relative;">
+                    <div
+                        style="position: absolute; top: 10px; right: 10px; color: #888; font-size: 12px; font-family: sans-serif;">
+                        JS</div>
+                    <pre
+                        style="margin: 0; color: #abb2bf; font-family: 'Consolas', monospace; font-size: 14px; line-height: 1.5;"><code>new OwlCarouselVanilla('#slider-default', {
+    items: 3,
+    loop: true,
+    margin: 30,
+    nav: true,
+    dots: true,
+    responsive: { 0: { items: 1 }, 768: { items: 2 }, 1024: { items: 3 } }
+});</code></pre>
                 </div>
             </div>
 
@@ -65,10 +153,63 @@
             <div id="demo-autowidth" class="demo-section">
                 <h2 style="margin-bottom: 20px;">Variable Item Widths</h2>
                 <div class="owl-carousel" id="slider-autowidth">
-                    <div class="item" style="width: 250px;"><div class="magazine-card"><div class="card-content"><h3 class="card-title">Narrow (250px)</h3></div></div></div>
-                    <div class="item" style="width: 450px;"><div class="magazine-card"><div class="card-content"><h3 class="card-title">Wide (450px)</h3></div></div></div>
-                    <div class="item" style="width: 300px;"><div class="magazine-card"><div class="card-content"><h3 class="card-title">Medium (300px)</h3></div></div></div>
-                    <div class="item" style="width: 550px;"><div class="magazine-card"><div class="card-content"><h3 class="card-title">Extra Wide (550px)</h3></div></div></div>
+                    <div class="item" style="width: 250px;">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3 class="card-title">Narrow (250px)</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" style="width: 450px;">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3 class="card-title">Wide (450px)</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" style="width: 300px;">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3 class="card-title">Medium (300px)</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" style="width: 550px;">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3 class="card-title">Extra Wide (550px)</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" style="width: 350px;">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3 class="card-title">Medium (350px)</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" style="width: 400px;">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3 class="card-title">Medium Wide (400px)</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    style="margin-top: 30px; background: #282c34; border-radius: 8px; padding: 20px; text-align: left; overflow-x: auto; position: relative;">
+                    <div
+                        style="position: absolute; top: 10px; right: 10px; color: #888; font-size: 12px; font-family: sans-serif;">
+                        JS</div>
+                    <pre
+                        style="margin: 0; color: #abb2bf; font-family: 'Consolas', monospace; font-size: 14px; line-height: 1.5;"><code>new OwlCarouselVanilla('#slider-autowidth', {
+    autoWidth: true,
+    loop: true,
+    margin: 20,
+    nav: true,
+    dots: true,
+    center: true
+});</code></pre>
                 </div>
             </div>
 
@@ -76,9 +217,63 @@
             <div id="demo-autoheight" class="demo-section">
                 <h2 style="margin-bottom: 20px;">Dynamic Height Adjustment</h2>
                 <div class="owl-carousel" id="slider-autoheight">
-                    <div class="item"><div class="magazine-card" style="height: 300px;"><div class="card-content"><h3>Short Content</h3></div></div></div>
-                    <div class="item"><div class="magazine-card" style="height: 500px;"><div class="card-content"><h3>Medium Content</h3></div></div></div>
-                    <div class="item"><div class="magazine-card" style="height: 700px;"><div class="card-content"><h3>Very Tall Content</h3></div></div></div>
+                    <div class="item">
+                        <div class="magazine-card" style="height: 300px;">
+                            <div class="card-content">
+                                <h3>Short Content</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card" style="height: 500px;">
+                            <div class="card-content">
+                                <h3>Medium Content</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card" style="height: 700px;">
+                            <div class="card-content">
+                                <h3>Very Tall Content</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card" style="height: 400px;">
+                            <div class="card-content">
+                                <h3>Short Content 2</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card" style="height: 600px;">
+                            <div class="card-content">
+                                <h3>Medium Content 2</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card" style="height: 800px;">
+                            <div class="card-content">
+                                <h3>Very Tall Content 2</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    style="margin-top: 30px; background: #282c34; border-radius: 8px; padding: 20px; text-align: left; overflow-x: auto; position: relative;">
+                    <div
+                        style="position: absolute; top: 10px; right: 10px; color: #888; font-size: 12px; font-family: sans-serif;">
+                        JS</div>
+                    <pre
+                        style="margin: 0; color: #abb2bf; font-family: 'Consolas', monospace; font-size: 14px; line-height: 1.5;"><code>new OwlCarouselVanilla('#slider-autoheight', {
+    items: 1,
+    autoHeight: true,
+    loop: true,
+    margin: 30,
+    nav: true,
+    dots: true
+});</code></pre>
                 </div>
             </div>
 
@@ -86,9 +281,64 @@
             <div id="demo-animate" class="demo-section">
                 <h2 style="margin-bottom: 20px;">Fade Transitions</h2>
                 <div class="owl-carousel" id="slider-animate">
-                    <div class="item"><div class="magazine-card"><div class="card-img-container"><img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=687&auto=format&fit=crop"></div></div></div>
-                    <div class="item"><div class="magazine-card"><div class="card-img-container"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=687&auto=format&fit=crop"></div></div></div>
-                    <div class="item"><div class="magazine-card"><div class="card-img-container"><img src="https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=687&auto=format&fit=crop"></div></div></div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-img-container"><img
+                                    src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=687&auto=format&fit=crop">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-img-container"><img
+                                    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=687&auto=format&fit=crop">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-img-container"><img
+                                    src="https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=687&auto=format&fit=crop">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-img-container"><img
+                                    src="https://images.unsplash.com/photo-1493612276216-ee3925520721?q=80&w=687&auto=format&fit=crop">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-img-container"><img
+                                    src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=687&auto=format&fit=crop">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-img-container"><img
+                                    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=687&auto=format&fit=crop">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    style="margin-top: 30px; background: #282c34; border-radius: 8px; padding: 20px; text-align: left; overflow-x: auto; position: relative;">
+                    <div
+                        style="position: absolute; top: 10px; right: 10px; color: #888; font-size: 12px; font-family: sans-serif;">
+                        JS</div>
+                    <pre
+                        style="margin: 0; color: #abb2bf; font-family: 'Consolas', monospace; font-size: 14px; line-height: 1.5;"><code>new OwlCarouselVanilla('#slider-animate', {
+    items: 1,
+    animateIn: 'owl-fade-in',
+    animateOut: 'owl-fade-out',
+    loop: true,
+    nav: true,
+    dots: true,
+    smartSpeed: 500
+});</code></pre>
                 </div>
             </div>
 
@@ -96,9 +346,63 @@
             <div id="demo-rtl" class="demo-section">
                 <h2 style="margin-bottom: 20px;">RTL (Right to Left) Support</h2>
                 <div class="owl-carousel" id="slider-rtl">
-                    <div class="item"><div class="magazine-card"><div class="card-content"><h3>Item 1 (Right)</h3></div></div></div>
-                    <div class="item"><div class="magazine-card"><div class="card-content"><h3>Item 2</h3></div></div></div>
-                    <div class="item"><div class="magazine-card"><div class="card-content"><h3>Item 3 (Left)</h3></div></div></div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Item 1 (Right)</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Item 2</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Item 3 (Left)</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Item 4</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Item 5</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Item 6</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    style="margin-top: 30px; background: #282c34; border-radius: 8px; padding: 20px; text-align: left; overflow-x: auto; position: relative;">
+                    <div
+                        style="position: absolute; top: 10px; right: 10px; color: #888; font-size: 12px; font-family: sans-serif;">
+                        JS</div>
+                    <pre
+                        style="margin: 0; color: #abb2bf; font-family: 'Consolas', monospace; font-size: 14px; line-height: 1.5;"><code>new OwlCarouselVanilla('#slider-rtl', {
+    rtl: true,
+    items: 2,
+    loop: true,
+    margin: 20,
+    nav: true,
+    dots: true
+});</code></pre>
                 </div>
             </div>
 
@@ -106,30 +410,158 @@
             <div id="demo-padding" class="demo-section">
                 <h2 style="margin-bottom: 20px;">Stage Padding (Peek Neighbors)</h2>
                 <div class="owl-carousel" id="slider-padding">
-                    <div class="item"><div class="magazine-card"><div class="card-img-container"><img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=687&auto=format&fit=crop"></div><div class="card-content"><h3>Slide 1</h3></div></div></div>
-                    <div class="item"><div class="magazine-card"><div class="card-img-container"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=687&auto=format&fit=crop"></div><div class="card-content"><h3>Slide 2</h3></div></div></div>
-                    <div class="item"><div class="magazine-card"><div class="card-img-container"><img src="https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=687&auto=format&fit=crop"></div><div class="card-content"><h3>Slide 3</h3></div></div></div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-img-container"><img
+                                    src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=687&auto=format&fit=crop">
+                            </div>
+                            <div class="card-content">
+                                <h3>Slide 1</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-img-container"><img
+                                    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=687&auto=format&fit=crop">
+                            </div>
+                            <div class="card-content">
+                                <h3>Slide 2</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-img-container"><img
+                                    src="https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=687&auto=format&fit=crop">
+                            </div>
+                            <div class="card-content">
+                                <h3>Slide 3</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-img-container"><img
+                                    src="https://images.unsplash.com/photo-1493612276216-ee3925520721?q=80&w=687&auto=format&fit=crop">
+                            </div>
+                            <div class="card-content">
+                                <h3>Slide 4</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-img-container"><img
+                                    src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=687&auto=format&fit=crop">
+                            </div>
+                            <div class="card-content">
+                                <h3>Slide 5</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-img-container"><img
+                                    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=687&auto=format&fit=crop">
+                            </div>
+                            <div class="card-content">
+                                <h3>Slide 6</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p style="margin-top: 20px; opacity: 0.7;">Using <code>stagePadding: 50</code> to make adjacent slides visible on the edges.</p>
+                <p style="margin-top: 20px; opacity: 0.7;">Using <code>stagePadding: 50</code> to make adjacent slides
+                    visible on the edges.</p>
+                <div
+                    style="margin-top: 30px; background: #282c34; border-radius: 8px; padding: 20px; text-align: left; overflow-x: auto; position: relative;">
+                    <div
+                        style="position: absolute; top: 10px; right: 10px; color: #888; font-size: 12px; font-family: sans-serif;">
+                        JS</div>
+                    <pre
+                        style="margin: 0; color: #abb2bf; font-family: 'Consolas', monospace; font-size: 14px; line-height: 1.5;"><code>new OwlCarouselVanilla('#slider-padding', {
+    items: 1,
+    stagePadding: 50,
+    loop: true,
+    margin: 20,
+    nav: true,
+    dots: true
+});</code></pre>
+                </div>
             </div>
 
             <!-- Demo: Merge -->
             <div id="demo-merge" class="demo-section">
                 <h2 style="margin-bottom: 20px;">Merge Grid (Variable Columns)</h2>
                 <div class="owl-carousel" id="slider-merge">
-                    <div class="item" data-merge="1"><div class="magazine-card"><div class="card-content"><h3>Small (1)</h3></div></div></div>
-                    <div class="item" data-merge="2"><div class="magazine-card"><div class="card-content"><h3>Double Width (2)</h3></div></div></div>
-                    <div class="item" data-merge="1"><div class="magazine-card"><div class="card-content"><h3>Small (1)</h3></div></div></div>
-                    <div class="item" data-merge="3"><div class="magazine-card"><div class="card-content"><h3>Triple Width (3)</h3></div></div></div>
+                    <div class="item" data-merge="1">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Small (1)</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-merge="2">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Double Width (2)</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-merge="1">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Small (1)</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-merge="3">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Triple Width (3)</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-merge="2">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Double Width (2)</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-merge="1">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Small (1)</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p style="margin-top: 20px; opacity: 0.7;">Using <code>merge: true</code> and <code>data-merge</code> attributes to occupy multiple grid slots.</p>
+                <p style="margin-top: 20px; opacity: 0.7;">Using <code>merge: true</code> and <code>data-merge</code>
+                    attributes to occupy multiple grid slots.</p>
+                <div
+                    style="margin-top: 30px; background: #282c34; border-radius: 8px; padding: 20px; text-align: left; overflow-x: auto; position: relative;">
+                    <div
+                        style="position: absolute; top: 10px; right: 10px; color: #888; font-size: 12px; font-family: sans-serif;">
+                        JS</div>
+                    <pre
+                        style="margin: 0; color: #abb2bf; font-family: 'Consolas', monospace; font-size: 14px; line-height: 1.5;"><code>new OwlCarouselVanilla('#slider-merge', {
+    items: 3,
+    merge: true,
+    loop: true,
+    margin: 20,
+    nav: true,
+    dots: true
+});</code></pre>
+                </div>
             </div>
 
             <!-- Demo: Positions -->
             <div id="demo-positions" class="demo-section">
                 <h2 style="margin-bottom: 20px;">UI Positions (Nav & Dots)</h2>
-                
-                <div style="margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; background: #eee; padding: 15px; border-radius: 10px;">
+
+                <div
+                    style="margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; background: #eee; padding: 15px; border-radius: 10px;">
                     <div style="font-weight: bold; width: 100%; margin-bottom: 5px;">Nav Positions:</div>
                     <button class="pos-btn active" data-type="nav" data-pos="middle-left-right">Middle</button>
                     <button class="pos-btn" data-type="nav" data-pos="top-left">Top Left</button>
@@ -142,7 +574,8 @@
                     <button class="pos-btn" data-type="nav" data-pos="right-vertical">Right Vertical</button>
                 </div>
 
-                <div style="margin-bottom: 30px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; background: #eee; padding: 15px; border-radius: 10px;">
+                <div
+                    style="margin-bottom: 30px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; background: #eee; padding: 15px; border-radius: 10px;">
                     <div style="font-weight: bold; width: 100%; margin-bottom: 5px;">Dots Positions:</div>
                     <button class="pos-btn" data-type="dots" data-pos="top-left">Top Left</button>
                     <button class="pos-btn" data-type="dots" data-pos="top-center">Top Center</button>
@@ -155,9 +588,64 @@
                 </div>
 
                 <div class="owl-carousel" id="slider-positions">
-                    <div class="item"><div class="magazine-card"><div class="card-content"><h3>Slide 1</h3></div></div></div>
-                    <div class="item"><div class="magazine-card"><div class="card-content"><h3>Slide 2</h3></div></div></div>
-                    <div class="item"><div class="magazine-card"><div class="card-content"><h3>Slide 3</h3></div></div></div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Slide 1</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Slide 2</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Slide 3</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Slide 4</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Slide 5</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Slide 6</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    style="margin-top: 30px; background: #282c34; border-radius: 8px; padding: 20px; text-align: left; overflow-x: auto; position: relative;">
+                    <div
+                        style="position: absolute; top: 10px; right: 10px; color: #888; font-size: 12px; font-family: sans-serif;">
+                        JS</div>
+                    <pre
+                        style="margin: 0; color: #abb2bf; font-family: 'Consolas', monospace; font-size: 14px; line-height: 1.5;"><code id="code-positions">new OwlCarouselVanilla('#slider-positions', {
+    items: 1,
+    loop: true,
+    margin: 20,
+    nav: true,
+    navPosition: 'middle-left-right',
+    dots: true,
+    dotsPosition: 'bottom-center'
+});</code></pre>
                 </div>
             </div>
 
@@ -165,12 +653,70 @@
             <div id="demo-callbacks" class="demo-section">
                 <h2 style="margin-bottom: 20px;">Events & Callbacks</h2>
                 <div class="owl-carousel" id="slider-callbacks">
-                    <div class="item"><div class="magazine-card"><div class="card-content"><h3>Slide 1</h3></div></div></div>
-                    <div class="item"><div class="magazine-card"><div class="card-content"><h3>Slide 2</h3></div></div></div>
-                    <div class="item"><div class="magazine-card"><div class="card-content"><h3>Slide 3</h3></div></div></div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Slide 1</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Slide 2</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Slide 3</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Slide 4</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Slide 5</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="magazine-card">
+                            <div class="card-content">
+                                <h3>Slide 6</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div id="log" class="log-container">
-                    <div class="log-entry"><span>[System]</span> Log initialized. Interaction events will appear here.</div>
+                    <div class="log-entry"><span>[System]</span> Log initialized. Interaction events will appear here.
+                    </div>
+                </div>
+                <div
+                    style="margin-top: 30px; background: #282c34; border-radius: 8px; padding: 20px; text-align: left; overflow-x: auto; position: relative;">
+                    <div
+                        style="position: absolute; top: 10px; right: 10px; color: #888; font-size: 12px; font-family: sans-serif;">
+                        JS</div>
+                    <pre
+                        style="margin: 0; color: #abb2bf; font-family: 'Consolas', monospace; font-size: 14px; line-height: 1.5;"><code>new OwlCarouselVanilla('#slider-callbacks', {
+    items: 2,
+    loop: true,
+    margin: 20,
+    nav: true,
+    dots: true,
+    onTranslate: () => console.log('onTranslate'),
+    onTranslated: () => console.log('onTranslated'),
+    onDrag: () => console.log('onDrag'),
+    onDragged: () => console.log('onDragged')
+});</code></pre>
                 </div>
             </div>
 
@@ -179,7 +725,8 @@
 
     <footer style="background: #222; color: white; padding: 60px 0; margin-top: 80px;">
         <div class="container" style="text-align: center;">
-            <div style="font-size: 1.5rem; font-weight: 800; color: var(--primary-color); margin-bottom: 20px;">OWL<span style="color: #fff;">CarouselVanilla</span></div>
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--primary-color); margin-bottom: 20px;">OWL<span
+                    style="color: #fff;">CarouselVanilla</span></div>
             <p style="opacity: 0.6; font-size: 0.9rem;">© 2024 OWLCarouselVanilla. All rights reserved.</p>
         </div>
     </footer>
@@ -196,13 +743,13 @@
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
                     const target = link.getAttribute('data-demo');
-                    
+
                     links.forEach(l => l.classList.remove('active'));
                     link.classList.add('active');
 
                     sections.forEach(s => s.classList.remove('active'));
                     document.getElementById(`demo-${target}`).classList.add('active');
-                    
+
                     // Re-initialize if hidden previously (optional, but good for demo)
                     window.dispatchEvent(new Event('resize'));
                 });
@@ -295,7 +842,7 @@
                 btn.addEventListener('click', () => {
                     const type = btn.getAttribute('data-type');
                     const pos = btn.getAttribute('data-pos');
-                    
+
                     // Update classes on buttons
                     document.querySelectorAll(`.pos-btn[data-type="${type}"]`).forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');
@@ -304,6 +851,22 @@
                     posSlider.currentSettings[type === 'nav' ? 'navPosition' : 'dotsPosition'] = pos;
                     if (type === 'nav') posSlider.updateNavigation();
                     else posSlider.updateDotsVisibility();
+
+                    // Update Code Snippet
+                    const codeBlock = document.getElementById('code-positions');
+                    if (codeBlock) {
+                        const activeNav = document.querySelector('.pos-btn.active[data-type="nav"]').getAttribute('data-pos');
+                        const activeDots = document.querySelector('.pos-btn.active[data-type="dots"]').getAttribute('data-pos');
+                        codeBlock.textContent = `new OwlCarouselVanilla('#slider-positions', {
+    items: 1,
+    loop: true,
+    margin: 20,
+    nav: true,
+    navPosition: '${activeNav}',
+    dots: true,
+    dotsPosition: '${activeDots}'
+});`;
+                    }
                 });
             });
 
@@ -330,4 +893,5 @@
         });
     </script>
 </body>
+
 </html>

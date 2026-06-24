@@ -10,7 +10,7 @@
 
 - **🚀 Zero Dependencies**: 100% Native ES6+ JavaScript.
 - **🏗️ Full Parity**: Supports `stagePadding`, `merge`, `autoWidth`, `autoHeight`, `RTL`, and more.
-- **🎨 UI Positions**: Advanced positioning system for Nav and Dots (Top, Middle, Bottom, Vertical stacks).
+- **🎨 UI Positions**: Advanced positioning system for Nav and Dots (Top, Middle, Bottom, Vertical stacks) with **Smart Collision Detection** that automatically avoids overlaps using modern CSS `:has()`.
 - **🕹️ Responsive Grid**: Breakpoint-based settings with deep object merging.
 - **⚡ Performance**: Hardware-accelerated transitions (`translate3d`) and optimized DOM recycling.
 - **📱 Touch & Drag**: Native support for mouse drag and touch gestures with elastic `pullDrag`.
