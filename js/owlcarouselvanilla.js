@@ -182,6 +182,7 @@ class OwlCarouselVanilla {
         }
 
         this.container.classList.toggle('owl-rtl', settings.rtl);
+        this.container.style.setProperty('--owl-nav-offset', `${settings.navOffset || 0}px`);
     }
 
     cloneForLoop() {
