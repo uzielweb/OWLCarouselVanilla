@@ -37,6 +37,7 @@ class OwlCarouselVanilla {
             dotsContainer: false,
             dotsPosition: 'bottom-center',
             navPosition: 'middle-left-right',
+            navOffset: 0,
             autoplay: false,
             autoplayTimeout: 5000,
             autoplayHoverPause: true,

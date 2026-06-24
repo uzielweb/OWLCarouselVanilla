@@ -586,6 +586,14 @@
                     <button class="pos-btn" data-type="dots" data-pos="right-vertical">Right Vertical</button>
                 </div>
 
+                <div
+                    style="margin-bottom: 30px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; background: #eee; padding: 15px; border-radius: 10px;">
+                    <div style="font-weight: bold; width: 100%; margin-bottom: 5px;">Nav Offset (Spacing for Middle Nav):</div>
+                    <button class="pos-btn active" data-type="offset" data-pos="0">Default (0px)</button>
+                    <button class="pos-btn" data-type="offset" data-pos="-30">Inset (-30px)</button>
+                    <button class="pos-btn" data-type="offset" data-pos="50">Outset (50px)</button>
+                </div>
+
                 <div class="owl-carousel" id="slider-positions">
                     <div class="item">
                         <div class="magazine-card">
@@ -832,6 +840,7 @@
                 margin: 20,
                 nav: true,
                 navPosition: 'middle-left-right',
+                navOffset: 0,
                 dots: true,
                 dotsPosition: 'bottom-center'
             });
@@ -847,14 +856,20 @@
                     btn.classList.add('active');
 
                     // Update Slider
-                    posSlider.currentSettings[type === 'nav' ? 'navPosition' : 'dotsPosition'] = pos;
-                    if (type === 'nav') posSlider.updateNavigation();
-                    else posSlider.updateDotsVisibility();
+                    if (type === 'offset') {
+                        posSlider.currentSettings.navOffset = parseInt(pos);
+                        posSlider.handleResize();
+                    } else {
+                        posSlider.currentSettings[type === 'nav' ? 'navPosition' : 'dotsPosition'] = pos;
+                        if (type === 'nav') posSlider.updateNavigation();
+                        else posSlider.updateDotsVisibility();
+                    }
 
                     // Update Code Snippet
                     const codeBlock = document.getElementById('code-positions');
                     if (codeBlock) {
                         const activeNav = document.querySelector('.pos-btn.active[data-type="nav"]').getAttribute('data-pos');
+                        const activeOffset = document.querySelector('.pos-btn.active[data-type="offset"]').getAttribute('data-pos');
                         const activeDots = document.querySelector('.pos-btn.active[data-type="dots"]').getAttribute('data-pos');
                         codeBlock.textContent = `new OwlCarouselVanilla('#slider-positions', {
     items: 1,
@@ -862,6 +877,7 @@
     margin: 20,
     nav: true,
     navPosition: '${activeNav}',
+    navOffset: ${activeOffset},
     dots: true,
     dotsPosition: '${activeDots}'
 });`;
